@@ -5,6 +5,7 @@ spring:
       port: 27017
       database: doctordb
 
-spring:
-  application:
-    name: EUREKA-REGISTRY
+eureka: 
+  client: 
+    service-url: 
+      default-zone: http://EUREKA-REGISTRY
