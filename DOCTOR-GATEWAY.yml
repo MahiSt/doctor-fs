@@ -1,0 +1,12 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://EUREKA-REGISTRY
+spring:    
+  cloud:
+    gateway:
+      routes:
+       - id: doctorApi
+         uri: lb://DOCTOR-API
+         predicates:
+          - Path=/template-doctor-api/**
