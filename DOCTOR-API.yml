@@ -15,8 +15,3 @@ eureka:
 spring:
   application:
     name: EUREKA-REGISTRY
-
-eureka: 
-  client: 
-    service-url: 
-      default-zone: http://EUREKA-REGISTRY
