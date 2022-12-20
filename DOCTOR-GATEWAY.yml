@@ -9,4 +9,4 @@ spring:
        - id: doctorApi
          uri: lb://DOCTOR-API
          predicates:
-          - Path=/template-doctor-api/**
+          - Path=/doctor-api/**
