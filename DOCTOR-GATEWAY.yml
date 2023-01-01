@@ -1,12 +1,41 @@
+# eureka:
+#   client:
+#     service-url:
+#       default-zone: http://EUREKA-REGISTRY
+# spring:    
+#   cloud:
+#     gateway:
+#       routes:
+#        - id: doctorApi
+#          uri: lb://DOCTOR-API
+#          predicates:
+#           - Path=/doctor-api/**
+          
 eureka:
   client:
     service-url:
-      default-zone: http://EUREKA-REGISTRY
-spring:    
+      default-zone: http://EUREKA-SERVER
+
+spring:
+  application:
+    name: DOCTOR-GATEWAY
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
       routes:
-       - id: doctorApi
-         uri: lb://DOCTOR-API
-         predicates:
-          - Path=/doctor-api/**
+      - id: doctor-cud-service
+        uri: lb://DOCTOR-CUD-API
+        predicates:
+        - Path=/doctor-cud-api/**
+
+      - id: doctor-get-service
+        uri: lb://DOCTOR-GET-API
+        predicates:
+        - Path=/doctor-retrieve-api/**          
