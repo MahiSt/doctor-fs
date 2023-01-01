@@ -38,4 +38,4 @@ spring:
       - id: doctor-get-service
         uri: lb://DOCTOR-GET-API
         predicates:
-        - Path=/doctor-retrieve-api/**          
+        - Path=/doctor-get-api/**          
