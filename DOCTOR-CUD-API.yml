@@ -4,6 +4,8 @@ spring:
       host: localhost
       port: 27017
       database: doctordb
+      username: root
+      password: root
 
 eureka: 
   client: 
