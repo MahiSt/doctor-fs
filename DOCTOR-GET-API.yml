@@ -11,3 +11,8 @@ eureka:
   client: 
     service-url: 
       default-zone: http://EUREKA-REGISTRY
+      
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: http://localhost:8080/realms/Fullstack-Project  
