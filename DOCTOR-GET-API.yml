@@ -6,13 +6,14 @@ spring:
       database: doctordb
       username: root
       password: root
+  
+  oauth2:
+    resourceserver:
+      jwt:
+        issuer-uri: http://localhost:8080/realms/Fullstack-Project  
 
 eureka: 
   client: 
     service-url: 
       default-zone: http://EUREKA-REGISTRY
       
-  oauth2:
-    resourceserver:
-      jwt:
-        issuer-uri: http://localhost:8080/realms/Fullstack-Project  
