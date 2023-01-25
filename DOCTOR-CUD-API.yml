@@ -18,4 +18,5 @@ eureka:
     service-url: 
       default-zone: http://EUREKA-REGISTRY
       
-      
+app:
+  cors-url: http://localhost:4200/
