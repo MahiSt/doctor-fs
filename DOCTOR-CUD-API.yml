@@ -2,11 +2,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://root:root@localhost:27017/doctordb
-      host: localhost
-      port: 27017
-      database: doctordb
-      username: root
-      password: root
+#       host: localhost
+#       port: 27017
+#       database: doctordb
+#       username: root
+#       password: root
   security:
     oauth2:
       resourceserver:
